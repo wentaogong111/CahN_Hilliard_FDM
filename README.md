@@ -23,7 +23,7 @@ where c is the concentration of binary mixture and can have values between -1 an
 
 This equation descripes how the mixtures evolves while it tries its local free energy $\frac{\partial f}{\partial c}= c^3-c$ and interfaces $\kappa\nabla^2c$ between the two componment 
 
-![]()
+![Cahn-Hilliard Equation](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/Picture1.png)
 
 # Finite Difference Method:Forward Time Central Space(FTCS),Explicit 
 $$ \frac{c_{n+1}-c_{n}}{\Delta t}= M\nabla^2\mu $$
