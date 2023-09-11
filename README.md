@@ -26,7 +26,10 @@ This equation descripes how the mixtures evolves while it tries its local free e
 ![Cahn-Hilliard Equation](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/equation.png)
 
 # Finite Difference Method:Forward Time Central Space(FTCS),Explicit 
-![grid](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/grid.png)
+
+![png](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/grid.png)
+
+
 $$ \frac{c_{n+1}-c_{n}}{\Delta t}= M\nabla^2\mu $$
 $$ \mu = c^3-c-\kappa\nabla^2c$$
 
@@ -74,13 +77,17 @@ $$
 
 # Example
 
-The following figure is a result for the system with M=1.0, W=2.0, $\kappa=0.5$, dx=1.0, dt=0.1. The initial condition is given by a normal distribution 
+The following figure is a result for the system with M= 1.0. dx=1.0,dt - 0.01, $\kappa=0.2$ The initial condition is given by a normal distribution 
 $$
 c(\boldsymbol{r},t=0) = c_0 + 0.1 \mathcal{N}(0,1)
 $$
 
 
-And the system is evolved until N = 1000 steps. 
-### c0 = 0.2
-![GIF](https://github.com/wentaogong111/CahnHilliard_PhaseSepration/blob/main/Results/cahn-hilliard-c0-0.2.png)
+And the system is evolved until N = 200 steps. 
+### c0 = 0.5
+![GIF](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/Code/bc-c0-Dirichlet_0.5.gif)
+
+![GIF](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/Code/bc-c0-Neumann_0.5.gif)
+
+![GIF](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/Code/bc-c0-Periodic_0.5.gif)
 
