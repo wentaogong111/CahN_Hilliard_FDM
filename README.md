@@ -1,5 +1,7 @@
-# CahN_Hilliard_FDM
-The python script to solve the Cahn-Hilliard equation using finite difference method
+# Cahn_Hilliard_FDM
+[reference](https://github.com/wentaogong111/Numerical_methods/blob/main/Reports/Application%20of%20Numerical%20Schemes%20%26%20Assignment.pdf)
+
+The python script to solve the Cahn-Hilliard equation using finite difference method (FTCS) with 3 different type boundary conditions
 
 
 __Cahn-Hilliard Equation:__ This equation models the time evolution of a scalar field $\phi$ which is a fourth-order partial differential equation that models phase separation. Its basic form in real space can be written as:
