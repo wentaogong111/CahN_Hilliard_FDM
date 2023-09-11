@@ -31,12 +31,13 @@ This equation descripes how the mixtures evolves while it tries its local free e
 
 
 $$ \frac{c_{n+1}-c_{n}}{\Delta t}= M\nabla^2\mu $$
-$$ \mu = c^3-c-\kappa\nabla^2c$$
+
+$$ \mu = c^3-c-\kappa\nabla^2c $$
 
 $$ 
-
 \nabla^2\mu = \frac{\mu_{i+1,j}-2\mu_{i,j}+\mu_{i-1,j}}{(\Delta x)^2}+\frac{\mu_{i,j+1}-2\mu_{i,j}+\mu_{i,j-1}}{(\Delta y)^2}
 $$
+
 $$ 
 \Delta x = \Delta y 
 $$
