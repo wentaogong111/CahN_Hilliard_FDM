@@ -94,3 +94,60 @@ And the system is evolved until N = 200 steps.
 
 ![GIF](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/Code/bc-c0-Periodic_0.5.gif)
 
+## Discretization: Runge-Kutta 4th Order (RK4) and central space method 
+
+
+### Chemical Potential ($ \mu $)
+
+$$
+\mu_{i,j} = c_{i,j}^3 - c_{i,j} - \frac{\kappa}{\Delta x^2}\nabla^2 c
+$$
+
+### Time Evolution of \( c \)
+
+$$
+\frac{\partial c}{\partial t} = M \nabla^2\mu
+$$
+
+## 4th-Order Runge-Kutta Scheme
+
+In the 4th-order Runge-Kutta method (RK4), the updating scheme has four stages, each with an intermediate step. Let's denote $ c^n $ as the value of $ c $ at the nth time step, and $ \Delta t $ as the time step size. The scheme for RK4 is:
+
+1. $ k_1 = f(c^n) $
+2. $ k_2 = f\left(c^n + \frac{\Delta t}{2} k_1\right) $
+3. $ k_3 = f\left(c^n + \frac{\Delta t}{2} k_2\right) $
+4. $ k_4 = f\left(c^n + \Delta t k_3\right) $
+
+Then, the update formula is:
+
+$$
+c^{n+1} = c^n + \frac{\Delta t}{6} \left( k_1 + 2k_2 + 2k_3 + k_4 \right)
+$$
+
+Here,$ f(c) = M\nabla^2\mu$
+
+
+1. Update $\mu$ field based on current c field on the domain 
+
+ $$ 
+\mu_{i,j} = (c_{i,j}^{n})^3-c_{i,j}^{n}-\frac{\kappa}{(\Delta x)^2}(c_{i+1,j}+c_{i-1,j}+c_{i,j+1}+c_{i,j-1}-4c_{i,j})
+$$
+
+ 2. Update c field based on $\mu$ field on the domian
+
+$$ 
+\nabla^2\mu = \frac{\mu_{i+1,j}-2\mu_{i,j}+\mu_{i-1,j}}{(\Delta x)^2}+\frac{\mu_{i,j+1}-2\mu_{i,j}+\mu_{i,j-1}}{(\Delta y)^2}
+$$
+
+$ f(c) = M \nabla^2\left(-\left(c^3 - c\right) + \nabla^2 c\right) $.
+ 
+ 
+The Laplacian in 2D can be approximated by the 5-point stencil as follows:
+
+$$
+\nabla^2 c \approx \frac{c_{i+1,j} - 2c_{i,j} + c_{i-1,j}}{\Delta x^2} + \frac{c_{i,j+1} - 2c_{i,j} + c_{i,j-1}}{\Delta y^2}
+$$
+
+
+By following these steps, we can discretize the 2D Cahn-Hilliard equation in time using the 4th-order Runge-Kutta scheme with 2nd order spatial discretization.
+
