@@ -151,3 +151,8 @@ $$
 
 By following these steps, we can discretize the 2D Cahn-Hilliard equation in time using the 4th-order Runge-Kutta scheme with 2nd order spatial discretization.
 
+![GIF](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/Code/RK4_bc-c0-Dirichlet_0.5.gif)
+
+![GIF](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/Code/RK4_bc-c0-Neumann_0.5.gif)
+
+![GIF](https://github.com/wentaogong111/CahN_Hilliard_FDM/blob/main/Code/RK4_bc-c0-Periodic_0.5.gif)
